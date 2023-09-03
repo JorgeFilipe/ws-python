@@ -81,14 +81,11 @@ for palavra in palavras:
     for letra in palavra:
         if letra == valor_usuario:
             print(f"A letra '{valor_usuario}' foi encontrada na palavra {palavra}.")
-            acerto=acerto+1
-        else:
-            print("fail")
-            cont=cont+1
+
 
 print()
-print("Contador: ",cont)
-print("Acertos: ",acerto)
+#print("Contador: ",cont)
+#print("Acertos: ",acerto)
             
 
 
