@@ -62,34 +62,46 @@
 
 #================= TESTE ======================
 
-cont=0
-acerto=0
+#cont=0
+#acerto=0
 
 #palavras = ["a","r"]  <<-- Voltar para este exemplo, pois o jogo vai correr com apenas uma lista que virá aleatória do [.Random()]
 
-palavras = [
-    ["q","u","e","i","j","o"],
-    ["m","u","s","i","c","a"],
-    ["a","r","t","r","o","p","o","d","e"],
-    ["a","r"],
-    ["n","o","t","a","s"]
-]
+#palavras = [
+#    ["q","u","e","i","j","o"],
+#    ["m","u","s","i","c","a"],
+#    ["a","r","t","r","o","p","o","d","e"],
+#    ["a","r"],
+#    ["n","o","t","a","s"]
+#]
 
-valor_usuario = input("Digite um valor: ")
+#valor_usuario = input("Digite um valor: ")
 
-for palavra in palavras:
-    for letra in palavra:
-        if letra == valor_usuario:
-            print(f"A letra '{valor_usuario}' foi encontrada na palavra {palavra}.")
-
-
-print()
+#for palavra in palavras:
+#    for letra in palavra:
+#        if letra == valor_usuario:
+#            print(f"A letra '{valor_usuario}' foi encontrada na palavra {palavra}.")
+#
+#
+#print()
 #print("Contador: ",cont)
 #print("Acertos: ",acerto)
+
+#=============== REMOVENDO LETRAS  =============================================================
+valor_usuario = input("Insira uma letra: ");   
             
+palavra = ["p","a","l","a","v","r","a"]
 
+for letra in palavra:
+    if letra == valor_usuario:
+        print(f"A letra '{valor_usuario}' foi encontrada na palavra {palavra}.")
+        palavra.remove(letra)
+        break
+            
+print(f"palavra {palavra}")      
 
-
+#================================================================================================
+            
 # print()
 # teste=["a","r"]
 # way to show the complete word to player when match is over or player loses:
