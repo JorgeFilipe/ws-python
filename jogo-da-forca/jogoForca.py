@@ -101,10 +101,12 @@ for letra in palavra:
 print(f"palavra {palavra}")      
 
 #================================================================================================
-            
-#  WHILE (chances == 15) {
-#         
-#    
+           
+# chances = 15            
+#  WHILE (chances diferente de 0) |OU| (palavra[] diferente de vazio) {
+#        
+#       erro = chances--; > (15-1)   
+#       acerto = palavra[] - 1 elemento(letra)  # lógica de remover letra
 #  } 
 # 
 # 
