@@ -102,7 +102,16 @@ print(f"palavra {palavra}")
 
 #================================================================================================
             
-# print()
-# teste=["a","r"]
-# way to show the complete word to player when match is over or player loses:
-# print(teste[0]+teste[1])
+#  WHILE (chances == 15) {
+#         
+#    
+#  } 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# #
+
