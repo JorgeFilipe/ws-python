@@ -88,17 +88,22 @@
 #print("Acertos: ",acerto)
 
 #=============== REMOVENDO LETRAS  =============================================================
-valor_usuario = input("Insira uma letra: ");   
+#valor_usuario = input("Insira uma letra: ");   
             
 palavra = ["p","a","l","a","v","r","a"]
 
-for letra in palavra:
-    if letra == valor_usuario:
-        print(f"A letra '{valor_usuario}' foi encontrada na palavra {palavra}.")
-        palavra.remove(letra)
-        break
+while palavra != []:
+    valor_usuario = input("Insira uma letra: "); 
+     
+    for letra in palavra:
+        if letra == valor_usuario:
+            print(f"A letra '{valor_usuario}' foi encontrada na palavra {palavra}.")
+            palavra.remove(letra)
+            break
             
-print(f"palavra {palavra}")      
+    print(f"palavra {palavra}") 
+            
+#print(f"palavra {palavra}")      
 
 #================================================================================================
            
