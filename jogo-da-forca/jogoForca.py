@@ -93,13 +93,17 @@
 palavra = ["p","a","l","a","v","r","a"]
 
 while palavra != []:
-    valor_usuario = input("Insira uma letra: "); 
-     
+    valor_usuario = input("Insira uma letra: ")
     for letra in palavra:
         if letra == valor_usuario:
             print(f"A letra '{valor_usuario}' foi encontrada na palavra {palavra}.")
             palavra.remove(letra)
-            break
+        elif letra != valor_usuario:
+            print("Você errou!!")
+    break
+
+        
+            
             
     print(f"palavra {palavra}") 
             
