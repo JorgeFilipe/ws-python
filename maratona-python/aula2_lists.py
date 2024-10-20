@@ -1,3 +1,13 @@
+#
+# Materiais de Apoio:
+#
+# https://www.w3schools.com/python/python_lists.asp
+#
+# https://www.w3schools.com/python/python_tuples.asp
+# 
+# 
+
+
 # Estrutura do array:
 cars = ["Volvo", "Mazda", "BMW", "Dodge", "Ford"]
 
