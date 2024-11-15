@@ -33,7 +33,7 @@ usuarioStoredBD="admin"
 #####################################################
 
 def verificar_senha(username, senha):
-    if username != usuarioStoredBD and senha != senhaStoaredBD:
+    if username != usuarioStoredBD and senha != senhaStoredBD:
         msg="Falha no Login"
     else:
         msg="Login com Sucesso"
