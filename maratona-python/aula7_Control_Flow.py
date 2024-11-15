@@ -22,15 +22,15 @@ print() ## QUEBRA DE LINHA
 print("==================================================")
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
+#*
 print() ## QUEBRA DE LINHA
 username=input("Nome de Usuário:")
 senha=input("Senha:")
 
-## INFORMAÇÔES ARMAZENADAS DENTRO DO BANCO DE DADOS ##
+#___ INFORMAÇÔES ARMAZENADAS DENTRO DO BANCO DE DADOS ____
 senhaStoredBD="123abc"
 usuarioStoredBD="admin"
-#####################################################
+#_________________________________________________________
 
 def verificar_senha(username, senha):
     if username != usuarioStoredBD and senha != senhaStoredBD:
@@ -43,3 +43,5 @@ def verificar_senha(username, senha):
 print() ## QUEBRA DE LINHA
 print(verificar_senha(username, senha))
 print() ## QUEBRA DE LINHA
+
+
