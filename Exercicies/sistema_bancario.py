@@ -73,6 +73,14 @@ if senha==senhaStoragedDataBase:
             print("Senha Alterada!")
             print(f"Lembre de anotar a nova senha: {senhaStoragedDataBase}")
             print()
+        if opc==4:
+            print()
+            print(f"Olá, {nameStoragedDataBase}! Faça a correção do seu nome abaixo")
+            newName=input("Novo nome: ")
+            print()
+            print("Nome Alterado!")
+            print(f"Lembre-se você usará: {nameStoragedDataBase} na próxima vez que realizar Login!")
+            print()
         if opc==5: 
             print()
             print("       ▲ ")
