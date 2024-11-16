@@ -77,6 +77,7 @@ if senha==senhaStoragedDataBase:
             print()
             print(f"Olá, {nameStoragedDataBase}! Faça a correção do seu nome abaixo")
             newName=input("Novo nome: ")
+            nameStoragedDataBase=newName
             print()
             print("Nome Alterado!")
             print(f"Lembre-se você usará: {nameStoragedDataBase} na próxima vez que realizar Login!")
@@ -86,11 +87,11 @@ if senha==senhaStoragedDataBase:
             print("       ▲ ")
             print("      / \ ")
             print("     /   \ ")
-            print("    /  █  \ ")
-            print("   /   ▄   \ ")
+            print("    /  █  \    Sessão Encerrada!")
+            print("   /   ▄   \   Retire o Cartão!")
             print("  /_________\ ")
             print()
-            print(">> Sessão Encerrada! Retire o Cartão! <<")
+            print()
             print()
             break
 else:
