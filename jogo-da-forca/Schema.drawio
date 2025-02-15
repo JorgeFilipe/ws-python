@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-04-06T02:59:20.852Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" version="24.1.0" etag="6U1cS3iaq3LDwtOlt-_7" type="device">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
   <diagram id="F2fhzsgZS-mnZyFLeK-5" name="Página-1">
-    <mxGraphModel dx="858" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="880" dy="572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -48,7 +48,7 @@
         <mxCell id="32" value="" style="edgeStyle=none;html=1;rounded=1;" parent="1" source="20" target="29" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="20" value="Drawn player enters word" style="shape=manualInput;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;rounded=1;" parent="1" vertex="1">
+        <mxCell id="20" value="Drawn player enters word" style="shape=manualInput;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;rounded=1;align=right;verticalAlign=bottom;fontSize=12;horizontal=1;" parent="1" vertex="1">
           <mxGeometry x="620" y="380" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="30" value="" style="edgeStyle=none;html=1;rounded=1;" parent="1" source="22" target="24" edge="1">
@@ -60,14 +60,17 @@
         <mxCell id="24" value="Start Game" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="550" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="27" value="&lt;h1&gt;Chances&lt;/h1&gt;&lt;p&gt;Total of chances = 15&lt;/p&gt;&lt;p&gt;1 = Head&lt;/p&gt;&lt;p&gt;2 = Body&lt;/p&gt;&lt;p&gt;3 = left leg&amp;nbsp;&lt;/p&gt;&lt;p&gt;4 = right leg&lt;/p&gt;&lt;p&gt;5 = left arm&lt;/p&gt;&lt;p&gt;6 = right arm&lt;/p&gt;&lt;p&gt;7 = left feet&lt;/p&gt;&lt;p&gt;8 = right feet&lt;/p&gt;&lt;p&gt;9 = left hand&lt;/p&gt;&lt;p&gt;10 = right hand&lt;/p&gt;&lt;p&gt;11 = left eye&lt;/p&gt;&lt;p&gt;12 = right eye&lt;/p&gt;&lt;p&gt;13 = nose&lt;/p&gt;&lt;p&gt;14 = lips&lt;/p&gt;&lt;p&gt;15 =&amp;nbsp; hang / end game&lt;/p&gt;" style="text;html=1;strokeColor=#314354;fillColor=#647687;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=1;fontColor=#ffffff;" parent="1" vertex="1">
-          <mxGeometry x="30" y="50" width="190" height="500" as="geometry" />
+        <mxCell id="27" value="&lt;h1&gt;Chances&lt;/h1&gt;&lt;p&gt;Total of chances = 15&lt;/p&gt;&lt;p&gt;1 = Head&lt;/p&gt;&lt;p&gt;2 = Body&lt;/p&gt;&lt;p&gt;3 = left leg&amp;nbsp;&lt;/p&gt;&lt;p&gt;4 = right leg&lt;/p&gt;&lt;p&gt;5 = left arm&lt;/p&gt;&lt;p&gt;6 = right arm&lt;/p&gt;&lt;p&gt;7 = left feet&lt;/p&gt;&lt;p&gt;8 = right feet&lt;/p&gt;&lt;p&gt;9 = left hand&lt;/p&gt;&lt;p&gt;10 = right hand&lt;/p&gt;&lt;p&gt;11 = left eye&lt;/p&gt;&lt;p&gt;12 = right eye&lt;/p&gt;&lt;p&gt;13 = nose&lt;/p&gt;&lt;p&gt;14 = lips&lt;/p&gt;&lt;p&gt;15 =&amp;nbsp; hang / end game&lt;/p&gt;" style="text;html=1;strokeColor=#314354;fillColor=#647687;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=1;fontColor=#ffffff;align=center;" parent="1" vertex="1">
+          <mxGeometry x="70" y="50" width="150" height="500" as="geometry" />
         </mxCell>
         <mxCell id="28" value="End" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#a0522d;fontColor=#ffffff;strokeColor=#6D1F00;" parent="1" vertex="1">
           <mxGeometry x="370" y="1060" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="29" value="Start Game" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="600" y="545" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="813y02WkZcuWdvmKNtKg-32" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Two Players&lt;/h1&gt;&lt;p&gt;The drawn player, choose, and write the word, and the other player you should guess.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="330" width="180" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
