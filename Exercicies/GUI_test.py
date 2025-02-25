@@ -1,5 +1,5 @@
 import tkinter as tk
-
+# Doc: https://docs.python.org/pt-br/3.13/library/tk.html
 # Criando a janela principal
 janela = tk.Tk()
 janela.title("Minha Interface Tkinter")
