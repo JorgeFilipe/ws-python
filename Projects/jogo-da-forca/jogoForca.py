@@ -92,7 +92,7 @@
             
 palavra = ["p","a","l","a","v","r","a"]
 
-while palavra[] != []:
+while palavra != []:
     valor_usuario = input("Insira uma letra: ")
     for letra in palavra:
         if letra == valor_usuario:
