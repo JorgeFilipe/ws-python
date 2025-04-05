@@ -1,13 +1,14 @@
 from main import app
+from flask import render_template
 
 @app.route("/")
 def homepage():
-    return "Meu Site no Flask"
+    return render_template("homepage.html")
 
-@app.route("/contato")
-def contato():
-    return "SEGUE TODOS OS CONTATOS"
+@app.route("/blog")
+def blog():
+    return render_template("blog.html")
 
-@app.route("/teste")
-def teste():
-    return "AAAAAAAAAAAAAAAAAAAAAAAAAAA"
+@app.route("/contatos")
+def contatos():
+    return render_template("contatos.html")
