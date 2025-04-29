@@ -12,3 +12,7 @@ def blog():
 @app.route("/contatos")
 def contatos():
     return render_template("contatos.html")
+
+@app.route("/torcedor")
+def torcedor():
+    return render_template("torcedor.html")
