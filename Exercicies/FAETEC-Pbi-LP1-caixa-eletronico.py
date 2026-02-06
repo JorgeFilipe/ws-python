@@ -83,7 +83,29 @@ while flag != True:
     if opc == 3: # PAGAMENTOS CONTA CORRENTE
         pag_CC+=1
         extrato_CC[0]['Pagamentos'] = pag_CC
+        ##
+        print("┌───────────────────────────────────────────────────────┐")
+        print("│             PAGAMENTOS CONTA CORRENTE                 │")
+        print("├───────────────────────────────────────────────────────┤")
+        nome_receb = input("│  Informe o nome do RECEBEDOR: ")
+        pag = float(input("│  Informe o VALOR DO PAGAMENTO: "))
+        print("└───────────────────────────────────────────────────────┘")
+        ##
         print("")
+        print("┌───────────────────────────────────────────────────────┐")
+        print("│   CONFIRMAR PAGAMENTO AO RECEBEDOR: "+nome_receb+" ?")
+        print("├───────────────────────────────────────────────────────┤")
+        confirm = input("│  Yes (Y) / No (N): ")
+        print("└───────────────────────────────────────────────────────┘")
+        print()
+        if confirm.upper() == "Y":
+            print()
+        else:
+            print("          ┌────────────────────────────────┐")
+            print("          │      OPERAÇÃO CANCELADA!       │")
+            print("          └────────────────────────────────┘")
+            print("")
+            
 
     if opc == 4: # TRANSFERÊNCIAS CONTA CORRENTE
         transf_CC += 1
@@ -144,6 +166,7 @@ while flag != True:
         print("")
         
     if opc == 0:
+        print()
         print("┌───────────────────────────────────────────┐")
         print("│                                           │")
         print("│         ▲                                 │")
