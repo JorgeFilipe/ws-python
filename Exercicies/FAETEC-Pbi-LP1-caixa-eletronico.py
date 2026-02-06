@@ -99,7 +99,35 @@ while flag != True:
         print("└───────────────────────────────────────────────────────┘")
         print()
         if confirm.upper() == "Y":
+            print("")
+            print("┌───────────────────────────────────────────────────────┐")
+            print("│   DIGITE A SENHA DE 4 DÍGITOS PARA CONFIRMAR          │")
+            print("├───────────────────────────────────────────────────────┤")
+            chalenge4d = input("│  >>")
+            print("└───────────────────────────────────────────────────────┘")
             print()
+            if chalenge4d == pwd4dig:
+                print("")
+                print("┌────────────────────────────────────────────────────────┐")
+                print("│   DIGITE A SENHA DE 8 DÍGITOS PARA EXECUTAR OPERAÇÃO   │")
+                print("├────────────────────────────────────────────────────────┤")
+                chalenge8d = input("│  >>")
+                print("└────────────────────────────────────────────────────────┘")
+                print()
+                if chalenge8d == pwd8dig:
+                    print()
+                else:
+                    print("          ┌────────────────────────────────┐")
+                    print("          │    SENHA 8 DÍGITOS ERRADA!     │")
+                    print("          │      OPERAÇÃO CANCELADA!       │")
+                    print("          └────────────────────────────────┘")
+                    print("")
+            else:
+                print("          ┌────────────────────────────────┐")
+                print("          │    SENHA 4 DÍGITOS ERRADA!     │")
+                print("          │      OPERAÇÃO CANCELADA!       │")
+                print("          └────────────────────────────────┘")
+                print("")
         else:
             print("          ┌────────────────────────────────┐")
             print("          │      OPERAÇÃO CANCELADA!       │")
