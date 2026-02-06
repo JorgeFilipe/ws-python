@@ -11,6 +11,8 @@
 # ❗Solicitar as 2 senhas de 4 e 8 dígitos para realizar as transações bancárias, nas operações de Saque, Pagamento, Transferência e Depósito.
 
 import datetime
+hoje = datetime.now()
+print("Data e Hora Atual:", hoje.strftime("%Y-%m-%d %H:%M"))
 
 ####### Contagem de Operações para Extrato da Conta Corrente
 pag_CC = 0
