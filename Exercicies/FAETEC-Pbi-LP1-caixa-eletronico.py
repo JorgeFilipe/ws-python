@@ -37,23 +37,25 @@ saldo_poupanca = 5000.00  # Saldo inicial da conta poupança
 flag=False
 
 while flag != True:
-    print("")
-    print("   Caixa Eletrônico 24 Horas   ")
-    print("")
-    print(" 1. Saldo Conta Corrente")
-    print(" 2. Extrato Conta Corrente")
-    print(" 3. Pagamentos Conta Corrente") # Solicitar 2 senhas.
-    print(" 4. Transferências Conta Corrente") # Solicitar 2 senhas.
-    print(" 5. Saque Conta Corrente") # Solicitar 2 senhas.
-    print(" 6. Deposito Conta Corrente") # Solicitar 2 senhas.
-    print(" 7. Saldo Conta Poupança")
-    print(" 8. Extrato Conta Poupança")
-    print(" 9. Pagamentos Conta Poupança") # Solicitar 2 senhas.
-    print("10. Transferências Conta Poupança") # Solicitar 2 senhas.
-    print("11. Saque Conta Poupança") # Solicitar 2 senhas.
-    print("12. Deposito Conta Poupança") # Solicitar 2 senhas.
-    print("")
-    print(" 0. Encerrar Sessão")
+    print()
+    print("┌────────────────────────────────────────┐")
+    print("│      CAIXA ELETRÔNICO 24 HORAS         │")
+    print("├────────────────────────────────────────┤")
+    print("│   1. Saldo Conta Corrente              │")
+    print("│   2. Extrato Conta Corrente            │")
+    print("│   3. Pagamentos Conta Corrente         │") # Solicitar 2 senhas.
+    print("│   4. Transferências Conta Corrente     │") # Solicitar 2 senhas.
+    print("│   5. Saque Conta Corrente              │") # Solicitar 2 senhas.
+    print("│   6. Deposito Conta Corrente           │") # Solicitar 2 senhas.
+    print("│   7. Saldo Conta Poupança              │")
+    print("│   8. Extrato Conta Poupança            │")
+    print("│   9. Pagamentos Conta Poupança         │") # Solicitar 2 senhas.
+    print("│  10. Transferências Conta Poupança     │") # Solicitar 2 senhas.
+    print("│  11. Saque Conta Poupança              │") # Solicitar 2 senhas.
+    print("│  12. Deposito Conta Poupança           │") # Solicitar 2 senhas.
+    print("├────────────────────────────────────────┤")
+    print("│   0. Encerrar Sessão                   │")
+    print("└────────────────────────────────────────┘")
     print("")
     opc = int(input(">> "))
 
@@ -68,16 +70,21 @@ while flag != True:
 
     if opc == 2: # EXTRATO CONTA CORRENTE
         print("")
-        print(" EXTRATO CONTA CORRENTE ")
-        print("")
-        print(f"Saldo Conta Corrente: R$: {saldo_corrente:.2f}")
-        print("")
-        print("Operações Realizadas Conta Corrente: ")
-        print("-------------------------------------")
-        print(f"-- Pagamentos: {extrato_CC[0]['Pagamentos']}")
-        print(f"-- Transferências: {extrato_CC[0]['Transferências']}")
-        print(f"-- Saques: {extrato_CC[0]['Saques']}")
-        print(f"-- Depósitos: {extrato_CC[0]['Depósitos']}")
+        print("┌──────────────────────────────────────┐")
+        print("│      EXTRATO DA CONTA CORRENTE       │")
+        print("├──────────────────────────────────────┤")
+        print("│                                      │")
+        print(f"│  Saldo Atual :  {saldo_corrente:.2f}")
+        print("│                                      │")
+        print("│ ------------------------------------ │")
+        print("│                                      │")
+        print("│  Operações Realizadas:               │")
+        print("│                                      │")
+        print(f"│     Pagamentos:  {extrato_CC[0]['Pagamentos']}")
+        print(f"│     Transferências:  {extrato_CC[0]['Transferências']}")
+        print(f"│     Saques:  {extrato_CC[0]['Saques']}")
+        print(f"│     Depósitos:  {extrato_CC[0]['Depósitos']}")
+        print("└──────────────────────────────────────┘")
         print("")
 
     if opc == 3: # PAGAMENTOS CONTA CORRENTE
@@ -115,6 +122,16 @@ while flag != True:
                 print("└────────────────────────────────────────────────────────┘")
                 print()
                 if chalenge8d == pwd8dig:
+                    saldo_corrente -= pag
+                    print()
+                    print("┌────────────────────────────────┐")
+                    print("│      PAGAMENTO REALIZADO!      │")
+                    print("└────────────────────────────────┘")
+                    print("┌──────────────────────────────────────┐")
+                    print("│    SALDO ATUAL DA CONTA CORRENTE     │")
+                    print("├─────┬────────────────────────────────┤")
+                    print(f"│  R$ │  {saldo_corrente:.2f}         ")
+                    print("└─────┴────────────────────────────────┘")
                     print()
                 else:
                     print("          ┌────────────────────────────────┐")
@@ -176,7 +193,66 @@ while flag != True:
     if opc == 9: # PAGAMENTOS CONTA POUPANÇA
         pag_CP += 1
         extrato_CP[0]['Pagamentos'] = pag_CP
+        ##
+        print("┌───────────────────────────────────────────────────────┐")
+        print("│             PAGAMENTOS CONTA POUPANÇA                 │")
+        print("├───────────────────────────────────────────────────────┤")
+        nome_receb = input("│  Informe o nome do RECEBEDOR: ")
+        pag = float(input("│  Informe o VALOR DO PAGAMENTO: "))
+        print("└───────────────────────────────────────────────────────┘")
+        ##
         print("")
+        print("┌───────────────────────────────────────────────────────┐")
+        print("│   CONFIRMAR PAGAMENTO AO RECEBEDOR: "+nome_receb+" ?")
+        print("├───────────────────────────────────────────────────────┤")
+        confirm = input("│  Yes (Y) / No (N): ")
+        print("└───────────────────────────────────────────────────────┘")
+        print()
+        if confirm.upper() == "Y":
+            print("")
+            print("┌───────────────────────────────────────────────────────┐")
+            print("│   DIGITE A SENHA DE 4 DÍGITOS PARA CONFIRMAR          │")
+            print("├───────────────────────────────────────────────────────┤")
+            chalenge4d = input("│  >>")
+            print("└───────────────────────────────────────────────────────┘")
+            print()
+            if chalenge4d == pwd4dig:
+                print("")
+                print("┌────────────────────────────────────────────────────────┐")
+                print("│   DIGITE A SENHA DE 8 DÍGITOS PARA EXECUTAR OPERAÇÃO   │")
+                print("├────────────────────────────────────────────────────────┤")
+                chalenge8d = input("│  >>")
+                print("└────────────────────────────────────────────────────────┘")
+                print()
+                if chalenge8d == pwd8dig:
+                    saldo_poupanca -= pag
+                    print()
+                    print("┌────────────────────────────────┐")
+                    print("│      PAGAMENTO REALIZADO!      │")
+                    print("└────────────────────────────────┘")
+                    print("┌──────────────────────────────────────┐")
+                    print("│    SALDO ATUAL DA CONTA POUPANÇA     │")
+                    print("├─────┬────────────────────────────────┤")
+                    print(f"│  R$ │  {saldo_poupanca:.2f}         ")
+                    print("└─────┴────────────────────────────────┘")
+                    print()
+                else:
+                    print("          ┌────────────────────────────────┐")
+                    print("          │    SENHA 8 DÍGITOS ERRADA!     │")
+                    print("          │      OPERAÇÃO CANCELADA!       │")
+                    print("          └────────────────────────────────┘")
+                    print("")
+            else:
+                print("          ┌────────────────────────────────┐")
+                print("          │    SENHA 4 DÍGITOS ERRADA!     │")
+                print("          │      OPERAÇÃO CANCELADA!       │")
+                print("          └────────────────────────────────┘")
+                print("")
+        else:
+            print("          ┌────────────────────────────────┐")
+            print("          │      OPERAÇÃO CANCELADA!       │")
+            print("          └────────────────────────────────┘")
+            print("")
     
     if opc == 10: # TRANSFERÊNCIAS CONTA POUPANÇA
         transf_CP += 1
