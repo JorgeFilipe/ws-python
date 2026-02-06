@@ -10,6 +10,8 @@
 
 # ❗Solicitar as 2 senhas de 4 e 8 dígitos para realizar as transações bancárias, nas operações de Saque, Pagamento, Transferência e Depósito.
 
+import datetime
+
 ####### Contagem de Operações para Extrato da Conta Corrente
 pag_CC = 0
 transf_CC = 0
@@ -80,10 +82,11 @@ while flag != True:
         print("│                                      │")
         print("│  Operações Realizadas:               │")
         print("│                                      │")
-        print(f"│     Pagamentos:  {extrato_CC[0]['Pagamentos']}")
-        print(f"│     Transferências:  {extrato_CC[0]['Transferências']}")
-        print(f"│     Saques:  {extrato_CC[0]['Saques']}")
-        print(f"│     Depósitos:  {extrato_CC[0]['Depósitos']}")
+        print(f"│   └─> Pagamentos:  {extrato_CC[0]['Pagamentos']}")
+        print(f"│   └─> Transferências:  {extrato_CC[0]['Transferências']}")
+        print(f"│   └─> Saques:  {extrato_CC[0]['Saques']}")
+        print(f"│   └─> Depósitos:  {extrato_CC[0]['Depósitos']}")
+        print("│                                      │")
         print("└──────────────────────────────────────┘")
         print("")
 
