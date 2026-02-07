@@ -10,9 +10,9 @@
 
 # ❗Solicitar as 2 senhas de 4 e 8 dígitos para realizar as transações bancárias, nas operações de Saque, Pagamento, Transferência e Depósito.
 
-import datetime
+from datetime import datetime
 hoje = datetime.now()
-print("Data e Hora Atual:", hoje.strftime("%Y-%m-%d %H:%M"))
+print("Data e Hora Atual:", )
 
 ####### Contagem de Operações para Extrato da Conta Corrente
 pag_CC = 0
@@ -44,6 +44,7 @@ while flag != True:
     print()
     print("┌────────────────────────────────────────┐")
     print("│      CAIXA ELETRÔNICO 24 HORAS         │")
+    print("│           "+hoje.strftime("%d/%m/%Y %H:%M")+"             │")
     print("├────────────────────────────────────────┤")
     print("│   1. Saldo Conta Corrente              │")
     print("│   2. Extrato Conta Corrente            │")
