@@ -1,4 +1,4 @@
-import calc # importa o module
+import calc # importa o module ()
 
 # Desta forma podemos usar a função diretamente, sem passar tbm o nome do module.
 from calc import soma
