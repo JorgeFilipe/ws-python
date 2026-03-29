@@ -13,6 +13,13 @@ print()
 # 
 # *#
 
+food_list=[
+    {'paçoquinha': 'Um doce de amendoin brasileiro'},
+    {'brigadeiro': 'um doce muito delicioso'},
+    {'pizza': 'um tipo de comida italiana'},
+    {'hamburguer': 'fastfood muito comum nos EUA'},
+    {'a': 'b'}
+]
 
 def add_food(chave, valor):
     if chave=="" or valor=="": # Trata o envio de valores vazios
@@ -26,6 +33,12 @@ def add_food(chave, valor):
         print()
         print("Para adicionar a comida você não pode enviar números")
         print()
+
+    for comida in food_list:
+        if comida==chave or comida==valor:
+            print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+            break
+
 
     print()
     print(f"Mais detalhes sobre a comida {chave}. {valor}")
