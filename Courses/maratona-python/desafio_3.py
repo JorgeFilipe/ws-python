@@ -1,3 +1,20 @@
+
+
+
+####################
+########      ########
+#####            ######       ##################     ####################
+####              #####       #################      ###################
+####              #####       ####                   #####
+########      ########        ####                   #####
+#####################         ###########            ############     #######     
+#####        ######           ###########            #########      ###     ###     #######  #########
+#####         ######          ####                   #####         ####     ####         #   ##  
+#####          ######         ####                   #####         #############       #     #######   
+#####           ######        #################      #####         ####     ####     #       ##
+#####            ######       ##################     #####         ####     ####    #######  ######### 
+
+
 print()
 #*
 # USANDO O type()
@@ -14,15 +31,18 @@ print()
 # *#
 
 food_list=[
-    {'paçoquinha': 'Um doce de amendoin brasileiro'},
-    {'brigadeiro': 'um doce muito delicioso'},
-    {'pizza': 'um tipo de comida italiana'},
-    {'hamburguer': 'fastfood muito comum nos EUA'},
-    {'a': 'b'}
+    {"comida":"paçoquinha","descricao":"Um doce de amendoin brasileiro"},
+    {"comida":"brigadeiro","descricao":"um doce muito delicioso"},
+    {"comida":"pizza","descricao":"um tipo de comida italiana"},
+    {"comida":"hamburguer","descricao":"fastfood muito comum nos EUA"},
+    {"comida":"a","descricao":"b"}
 ]
 
 def add_food(chave, valor):
+    valido=True
+
     if chave=="" or valor=="": # Trata o envio de valores vazios
+        valido=False
         print()
         print("Para adicionar a comida você não pode enviar um dos 2 valores em branco")
         print()
@@ -30,18 +50,30 @@ def add_food(chave, valor):
     if type(chave)!=str or type(valor)!=str: # Trata o envio de números/caracteres especiais
         # Depois pensar em utilizar "if not comida.isalpha(): que não permite numeros mesmo sendo string"
         # E para a descrição usar "if not descricao.replace(" ", "").isalpha(): , que permite espaços + letras apenas"
+        valido=False
         print()
         print("Para adicionar a comida você não pode enviar números")
         print()
 
-    for comida in food_list:
-        if comida==chave or comida==valor:
-            print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+    for comida in food_list: # Trata o cadastro de comidas repetidas
+        if comida["comida"]==chave:
+            print()
+            print(f" {comida['comida']} já está cadastrado no sistema")
+            valido=False
             break
 
+    if valido==True:
+        #food_list[]={'comida':chave,'descricao':valor}
+        print()
+        print("COMIDA CADASTRADA ✅")
+        print()
+        print(food_list)
 
-    print()
-    print(f"Mais detalhes sobre a comida {chave}. {valor}")
+    
+    if valido==False:
+        print()
+        print("❌🟥 OPERAÇÃO CANCELADA POR CAUSA DE INCONSISTÊNCIAS ❌🟥")
+        print()
 
 def delete_food(chave, valor):
     print()
