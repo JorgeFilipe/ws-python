@@ -103,11 +103,76 @@ def delete_food(chave):
 
 # ATUALIZAR
 def update_food(chave, valor):
-    print()
+    valido=True
+    cont=0
+
+    if chave=="" or valor=="": # Trata o envio de valores vazios
+        valido=False
+        print()
+        print("🔵 Para adicionar a comida você deve enviar 2 valores, nome da comida e descrição 🔵")
+        print()
+
+    if type(chave)!=str or type(valor)!=str:
+        valido=False
+        print()
+        print("🔵 Para atualizar a descrição da comida você não pode enviar números 🔵")
+        print()
+
+    for comida in food_list:# Trata atualização de comidas inexistentes
+        if comida != chave:
+            cont=cont+1
+    if cont==len(food_list):
+        valido=False
+        print()
+        print(f"🔵 {chave} não existe no sistema 🔵")
+        print()
+
+    if valido==True:
+        food_list[chave]=valor
+        print()
+        print("🔵 DESCRIÇÃO ATUALIZADA! ✅")
+        print()
+
+    if valido==False:
+        print()
+        print("❌ OPERAÇÃO CANCELADA POR CAUSA DE INCONSISTÊNCIAS ❌")
+        print()
 
 # BUSCAR DESCRIÇÃO
-def get_food(chave, valor):
-    print()
+def get_food(chave):
+    valido=True
+    cont=0
+
+    if chave=="": # Trata o envio de valores vazios
+        valido=False
+        print()
+        print("🟢 Para buscar pela comida você não pode enviar valores em branco 🟢")
+
+    if type(chave)!=str: # Trata o envio de números/caracteres especiais
+        valido=False
+        print()
+        print("🟢 Para buscar pela comida você não pode enviar números 🟢")
+
+    for comida in food_list: # Busca no Dict se a comida existe
+        if comida!=chave:
+            cont=cont+1
+    if cont==len(food_list): # Busca no Dict se a comida existe
+        print()
+        print(f"🟢 {chave} não foi encontrado no sistema 🟢")
+
+    if valido==True:
+        for comida in food_list:# Exibindo a descrição da comida após match no dicionario
+            if comida == chave:
+                print()
+                print(f"🟢 {comida}: {food_list[comida]} 🟢")
+                break           
+
+    if valido==False:
+        print()
+        print("❌ OPERAÇÃO CANCELADA POR CAUSA DE INCONSISTÊNCIAS ❌")
+
+
+# MENU DO SISTEMA USANDO WHILE
 flag=False
 while flag==False:
     print()
@@ -139,10 +204,13 @@ while flag==False:
         delete_food(chave)
 
     if opt=="3":
-        print()
+        chave=input("Informe o nome da comida: ")
+        valor=input("Informe a NOVA descrição da comida: ")
+        update_food(chave,valor)
 
     if opt=="4":
-        print()
+        chave=input("Informe o nome da comida: ")
+        get_food(chave)
 
     if opt=="5": # Lista os itens do Dict food_list
         print()
