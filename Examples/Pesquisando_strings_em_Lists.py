@@ -1,6 +1,4 @@
 
-
-
 list_urls=['google', 'icanhazip.com', 'ip-api', 'youtube.com']
 for i in list_urls:
     if "." in i in list_urls: # PESQUISA SE DENTRO DO ITEM POSSUI PONTO.
