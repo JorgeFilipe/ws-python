@@ -26,7 +26,9 @@ while flag==False:
     
     lista_de_urls = [item.strip() for item in urls.split(',')] # Pega cada valor separando por vírgula (split) e trata removendo os espaços do inicio e do final de cada item com o strip(), depois adiciona os itens tratados em uma nova lista.
 
-    print(lista_de_urls)
+    lista_final = [u if u.startswith(("http://", "https://")) else f"https://{u}" for u in lista_de_urls]
+
+    print(lista_final)
 
     while flag2==False: #Loop para tratar opção inválidas e/ou sair do programa.
         print()
