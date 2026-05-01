@@ -12,7 +12,7 @@ dados = "nome, idade, cidade"
 lista_limpa = [item.strip() for item in dados.split(',')]
 print(lista_limpa)  # ['nome', 'idade', 'cidade']
 
-##### EXPLICAÇÃO DO COMBO lista_limpa = [item.strip() for item in dados.split(',')]
+##### EXPLICAÇÃO DO COMBO:  lista_limpa = [item.strip() for item in dados.split(',')]
 #
 # Esse exemplo é um "combo" clássico de manipulação de dados em Python. 
 # Ele combina três conceitos fundamentais para limpar informações vindas de arquivos ou entradas de usuários:
