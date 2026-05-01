@@ -23,6 +23,11 @@ while flag==False:
     print()
     urls=input()
     print()
+    
+    lista_de_urls = [item.strip() for item in urls.split(',')] # Pega cada valor separando por vírgula (split) e trata removendo os espaços do inicio e do final de cada item com o strip(), depois adiciona os itens tratados em uma nova lista.
+
+    print(lista_de_urls)
+
     while flag2==False: #Loop para tratar opção inválidas e/ou sair do programa.
         print()
         op=input("Precisa verificar mais algum site? s/n: ")
