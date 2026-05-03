@@ -34,17 +34,17 @@ urls=['google.com', 'https://ip-api.com', 'dd2d2wed233423', 'icanhazip.com', 'Wa
 
 for url in urls:
     if "." in url in urls: # PESQUISA SE DENTRO DO ITEM POSSUI "as".
-        urls_validas.append(url)
+        urls_validas.append(url+" é uma URL válida! ✅")
     else:
-        urls_invalidas.append(url)
+        urls_invalidas.append(url+" é uma URL inválida! ❌")
 
-# NOVA LISTA = urls_validas + urls_inválidas
+final_list = [urls_validas + urls_invalidas] # JUNTA AS DUAS LISTAS EM UMA SÓ.
 
 
 print()#QUEBRALINHA
-print("URLs Válidas ✅:")
-print(urls_validas)
+print("Lista Formatada:")
 print()#QUEBRALINHA
-print("URLs Inválidas ❌:")
-print(urls_invalidas)
-print()#QUEBRALINHA
+
+for re in final_list:
+    print()#QUEBRALINHA
+    print(re)
