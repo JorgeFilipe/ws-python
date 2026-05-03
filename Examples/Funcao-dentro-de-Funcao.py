@@ -67,14 +67,18 @@ valor=2
 a="Winner"
 
 print()
+
 print(fourth(second(first(third(a))))) # A Ordem de execução é da função mais próxima da variável/valor para a mais longe(da direita para a esquerda): 
 #(4° em último)<-(2° em terceiro)<-(1° em segundo)<-(3° executou primeiro)
+
 print()
+
 print(mult4(mult1(mult2(mult3(valor))))) # A Ordem de execução é da função mais próxima da variável/valor para a mais longe(da direita para a esquerda):
 # primeiro executou a função 3° (2x3=6) que é a mais próxima do valor, depois a função 2°(6x2=12), depois a função 1° (12x1=12) e por último a função 4° (12x4=48) que é a mais longe do valor.
-print()
-print()
+
 print()
 
+print(mult1(mult3(mult4(mult2(valor-1))))) # A Ordem de execução é da função mais próxima da variável/valor para a mais longe(da direita para a esquerda):
+# primeiro executou a função 2° (1x2=2) que é a mais próxima do valor, depois a função 4°(2x4=8), depois a função 3° (8x3=24) e por último a função 1° (24x1=24) que é a mais longe do valor.
 
-
+print()
