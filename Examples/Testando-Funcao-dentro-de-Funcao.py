@@ -1,0 +1,74 @@
+def soma(a, b):
+    valorsoma = a /+ b
+    return valorsoma
+
+def multiplicacao(a, b):
+    valormultiplicacao = a * b
+    return valormultiplicacao
+
+a1 = 2
+a2 = 3
+a3 = 4
+a5 = 5
+
+print()
+print(multiplicacao(a1,soma(a1,a3))) # Passando função dentro de função, funciona.
+temp = soma(a1,a3)
+print()
+print(multiplicacao(a1,temp)) # Fazendo separado para comprovar que funciona, passando função dentro de função.
+print()
+print("------------------")
+
+def add_protocolo(url):
+    formatado="https://"+url
+    return formatado
+
+def add_dot_com(url):
+    formatando=url+".com"
+    return formatando
+
+url="google"
+
+print()
+print(add_protocolo(add_dot_com(url))) # Testando Função dentro de Função usando uma váriável
+print()
+
+print("------------------")
+
+# TESTANDO SE AS ORDENS DAS FUNÇÕES AFETAM O RESULTADO COM STRINGS
+def first(a):
+    temp="Add 1st, "+a
+    return temp
+def second(a):
+    temp="Add 2nd, "+a
+    return temp
+def third(a):
+    temp="Add 3rd, "+a
+    return temp
+def fourth(a):
+    temp="Add 4th, "+a
+    return temp
+
+# TESTANDO SE AS ORDENS DAS FUNÇÕES AFETAM O RESULTADO COM INTEIROS
+def mult1(val):
+    resp=val*1
+    return resp
+def mult2(val):
+    resp=val*2
+    return resp
+def mult3(val):
+    resp=val*3
+    return resp
+def mult4(val):
+    resp=val*4
+    return resp
+
+valor=2
+a="Winner"
+
+print()
+print(fourth(second(first(third(a))))) # A Ordem de execução é da função mais próxima da variável/valor para a mais longe(da direita para a esquerda): 
+#(4° em último)<-(2° em terceiro)<-(1° em segundo)<-(3° executou primeiro)
+
+
+
