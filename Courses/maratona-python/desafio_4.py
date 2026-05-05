@@ -12,6 +12,8 @@ print(url_indeed.status_code,": ",httpstatuscodelib.status_code_meaning(url_inde
 
 flag=False
 flag2=False
+urls_validas=[]
+urls_invalidas=[]
 
 while flag==False:
     flag=False
@@ -26,9 +28,18 @@ while flag==False:
     
     lista_de_urls = [item.strip() for item in urls.split(',')] # Pega cada valor separando por vírgula (split) e trata removendo os espaços do inicio e do final de cada item com o strip(), depois adiciona os itens tratados em uma nova lista.
 
-    urls_tratadas = [u if u.startswith(("http://", "https://")) else f"https://{u}" for u in lista_de_urls]
+    for u in lista_de_urls:
+        if "." in u in lista_de_urls: # PESQUISA SE DENTRO DO ITEM POSSUI PONTO.
+            if u.startswith("https://") or u.startswith("http://"):
+                urls_validas.append(u)
+            else:
+                urls_validas.append("https://"+u) # ADICIONA AS URLS VÁLIDAS EM UMA NOVA LISTA.
+        else:
+            urls_invalidas.append(u+" URL Inválida") # ADICIONA AS URLS INVÁLIDAS EM UMA NOVA LISTA.
+    #urls_tratadas = [u if u.startswith(("http://", "https://")) else f"https://{u}" for u in lista_de_urls]
 
-    print(urls_tratadas)
+    print(urls_validas)
+    print(urls_invalidas)
 
     while flag2==False: #Loop para tratar opção inválidas e/ou sair do programa.
         print()
