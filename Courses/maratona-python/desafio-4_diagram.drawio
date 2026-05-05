@@ -1,0 +1,84 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="6n0H4JX3oWbh91mDKC1X">
+    <mxGraphModel dx="899" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-15" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pXe26xA_E0yuE-1DJdkH-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="input" vertex="1">
+          <mxGeometry height="60" width="120" x="330" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-13" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="pXe26xA_E0yuE-1DJdkH-26" value="&lt;b&gt;&lt;font style=&quot;color: rgb(255, 153, 51);&quot;&gt;NÃO&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-16" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#00FFFF;" target="pXe26xA_E0yuE-1DJdkH-11" value="&lt;b&gt;SIM&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-10" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="URL&lt;div&gt;Válida?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="350" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-17" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.001;entryY=0.415;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#00FFFF;fontStyle=1" target="pXe26xA_E0yuE-1DJdkH-18" value="SIM">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-20" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pXe26xA_E0yuE-1DJdkH-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-21" connectable="0" parent="pXe26xA_E0yuE-1DJdkH-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF9933;fontStyle=1" value="NÂO" vertex="1">
+          <mxGeometry relative="1" x="-0.0815" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-11" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Possui&lt;div&gt;HTTP&lt;/div&gt;&lt;div&gt;ou&lt;/div&gt;&lt;div&gt;HTTPS ?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="110" x="340" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-24" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pXe26xA_E0yuE-1DJdkH-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="699.9999999999998" y="310" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-28" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="pXe26xA_E0yuE-1DJdkH-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Add em uma lista:&lt;div&gt;&#39;URLs_Validas_Tratadas&#39;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="520" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-22" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pXe26xA_E0yuE-1DJdkH-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-19" parent="1" style="whiteSpace=wrap;html=1;" value="Add &#39;HTTPS://&#39;" vertex="1">
+          <mxGeometry height="60" width="120" x="335" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-29" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pXe26xA_E0yuE-1DJdkH-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="add em uma lista: &#39;URLs_invalidas&#39;" vertex="1">
+          <mxGeometry height="60" width="120" x="740" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Adiciona descrição:&lt;div&gt;variável+&quot; URL Inválida&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="520" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-34" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pXe26xA_E0yuE-1DJdkH-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-27" parent="1" style="whiteSpace=wrap;html=1;" value="Exibir Resultado" vertex="1">
+          <mxGeometry height="60" width="120" x="740" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-33" edge="1" parent="1" source="pXe26xA_E0yuE-1DJdkH-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pXe26xA_E0yuE-1DJdkH-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-31" parent="1" style="whiteSpace=wrap;html=1;" value="Primeiro:&lt;br&gt;&lt;br&gt;Printar a lista de URLs Válidas e Tratadas chamando o Requests e meu módulo de HTTP Status Code" vertex="1">
+          <mxGeometry height="100" width="180" x="890" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="pXe26xA_E0yuE-1DJdkH-32" parent="1" style="whiteSpace=wrap;html=1;" value="Segundo:&lt;br&gt;&lt;br&gt;Printa no fim a lista de URLs Inválidas" vertex="1">
+          <mxGeometry height="60" width="120" x="920" y="680" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
