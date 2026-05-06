@@ -7,15 +7,24 @@ r=requests.get("https://www.google.com/")
 print(r.status_code,": ",httpstatuscodelib.status_code_meaning(r.status_code)) 
 print(url_indeed.status_code,": ",httpstatuscodelib.status_code_meaning(url_indeed.status_code)) 
 
- #def tratar_input(entrada):
- #   print("funfando!")
+def valida_url(entrada):
+    r=requests.get(entrada)
+    if r.status_code==200:
+        result="Site Online 🟢"
+    else:
+        result="Site Offline 🔴"
+    return result
 
 flag=False
 flag2=False
+lista_de_urls=[]
 urls_validas=[]
 urls_invalidas=[]
 
 while flag==False:
+    lista_de_urls.clear()
+    urls_validas.clear()
+    urls_invalidas.clear()
     flag=False
     flag2=False
     print()
@@ -38,8 +47,12 @@ while flag==False:
             urls_invalidas.append(u+" URL Inválida") # ADICIONA AS URLS INVÁLIDAS EM UMA NOVA LISTA.
     #urls_tratadas = [u if u.startswith(("http://", "https://")) else f"https://{u}" for u in lista_de_urls]
 
-    print(urls_validas)
-    print(urls_invalidas)
+    #print(urls_validas)
+    #print(urls_invalidas)
+    for u in urls_validas:
+        print(f"{u} ",valida_url(u))
+    for u in urls_invalidas:
+        print(f"{u}")
 
     while flag2==False: #Loop para tratar opção inválidas e/ou sair do programa.
         print()
@@ -51,6 +64,9 @@ while flag==False:
             print("Programa Encerrado!")
             print()
         elif op=="s" or op=="S":
+            #lista_de_urls.clear
+            #urls_validas.clear
+            #urls_invalidas.clear
             flag=False
             flag2=True
         else:
