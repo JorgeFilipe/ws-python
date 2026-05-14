@@ -1,3 +1,13 @@
+#
+# Materiais de Apoio:
+#
+# https://www.w3schools.com/python/python_lists.asp
+#
+# https://www.w3schools.com/python/python_tuples.asp
+# 
+# 
+
+
 # Estrutura do array:
 cars = ["Volvo", "Mazda", "BMW", "Dodge", "Ford"]
 
@@ -98,3 +108,15 @@ print()
 print("Apolo" not in alunos)
 print("Floresta" not in crazy)
 print("Ford" not in cars)
+
+
+# Lista de variaveis
+var1 = 1
+var2 = 2
+var3 = 6
+var4 = 4
+var5 = 5
+
+listaDeVars=[var1,var2,var3,var4,var5]
+
+print(listaDeVars[0])

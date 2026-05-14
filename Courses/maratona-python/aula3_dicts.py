@@ -79,6 +79,7 @@
 
 
 ############################# Inserindo várias dicts a um Vetor
+
 alunos = [
   {"nome":"João","idade":20,"id":"G5A01R","notas":[10,7.5,9,6]},
   {"nome":"Maria","idade":21,"id":"9DW50F","notas":[9,8,7,6]},
@@ -92,7 +93,14 @@ alunos = [
 
 # Outros exemplos:
 
-print(alunos[2]["notas"])
+print()
+print(alunos[1]["nome"])
+print(alunos[1]["idade"])
+print(alunos[1]["id"])
+print(alunos[1]["notas"])
+print()
+print(alunos) # LISTANTO TUDO
+
 # printando em linha
 
 # Listando as Idades dos Alunos
