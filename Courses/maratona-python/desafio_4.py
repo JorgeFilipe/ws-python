@@ -1,3 +1,16 @@
+## 
+## 💡Proximas Ideias:
+##  | 
+##  | AO RETORNAR O STATUS DE CADA URL, MOSTRAR O CÓDIGO HTTP RETORNADO
+##  | E O SIGNIFICADO DO STATUS CODE RETORNADO.
+##  | 
+##  | 
+##  | 
+## 
+## 
+## 
+
+
 import requests
 import httpstatuscodelib # módulo criado para mapear os status codes HTTP com seus significados.
 
@@ -10,9 +23,9 @@ print(url_indeed.status_code,": ",httpstatuscodelib.status_code_meaning(url_inde
 def valida_url(entrada):
     r=requests.get(entrada)
     if r.status_code==200:
-        result="Site Online 🟢"
+        result="🟢 Site Online "
     else:
-        result="Site Offline 🔴"
+        result="🔴 Site Offline "
     return result
 
 flag=False
