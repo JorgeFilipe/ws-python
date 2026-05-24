@@ -79,3 +79,27 @@ soup2= BeautifulSoup(html_ij,'html.parser') # Parseia o resultado do teste.text 
 #title = soup2.find(id="a8wd4a654") # Encontra e armazena a tag que possui essa ID, no caso id="a8wd4a654"
 #title_text = title.get('title') # Acessou a TAG e pega só o texto do title, no caso "Desenvolvedor Python".
 #print(title_text)
+
+#>> NOVOS TESTES USANDO A IDEIA ACIMA, SÓ QUE EM OUTROS SITES, POIS OS QUE USEI NÃO TINHAM 'id' NAS TAGS:
+#>> SITE ALVO: https://www.w3schools.com/html/html_id.asp
+#>> TAG ALVO = <a id="navbtn_certified" title="Certificates" role="button">Certificates</a>
+#>> ID DO ALVO = id="navbtn_certified"
+#>> ALVO = Certificates
+novo_alvo = requests.get("https://www.w3schools.com/html/html_id.asp")
+html_alvo = novo_alvo.text
+soup_alvo = BeautifulSoup(html_alvo,'html.parser')
+encontrando_title_alvo = soup_alvo.find(id="navbtn_certified")  # Encontra e armazena a tag que possui essa ID.
+title_alvo_capturado = encontrando_title_alvo.get('title') # # Acessou a TAG e pega só o texto do title, no caso "Certificates".
+print(title_alvo_capturado) # Exibe o valor capturado, nesse exemplo é "Certificates"
+
+
+
+
+
+
+
+
+
+
+
+
