@@ -1,0 +1,4 @@
+Encontrei alguns sites para testar conceitos aprendidos nas aulas, praticar e etc:
+• https://books.toscrape.com/index.html
+• https://quotes.toscrape.com/
+• https://www.w3schools.com/html/
