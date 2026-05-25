@@ -1,0 +1,4 @@
+O Selenium é um framework de código aberto utilizado para automatizar navegadores web. Ele permite simular ações humanas (cliques, digitação, navegação) para testar aplicações ou automatizar tarefas repetitivas e extração de dados. Suporta as principais linguagens de programação, como Python, Java e C#.
+
+
+O ecossistema do Selenium é composto por três ferramentas principais:Selenium WebDriver: A principal interface de programação para controlar navegadores nativamente. Oferece controle direto para interagir com elementos web.Selenium IDE: Uma extensão para navegadores que permite gravar e reproduzir interações, facilitando a criação de testes sem a necessidade de escrever código.Selenium Grid: Ferramenta que permite executar testes em múltiplos navegadores e sistemas operacionais de forma distribuída, acelerando a execução de grandes suítes de testes.
