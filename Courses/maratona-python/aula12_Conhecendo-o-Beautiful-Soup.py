@@ -16,8 +16,10 @@ url_infojobs = "https://www.infojobs.com.br/empregos.aspx?palabra=Python"
 url_empregare = "https://www.empregare.com/pt-br/vagas?query=python"
 url_catho = "https://www.catho.com.br/vagas/python/"
 url_gupy = "https://portal.gupy.io/job-search/term=python"
+url_indeed = "https://br.indeed.com/jobs?q=desenvolvedor+python"
+url_progamathor="https://programathor.com.br/jobs-python"
 
-lsturl=[url_catho,url_empregare,url_gupy,url_infojobs]
+lsturl=[url_catho,url_empregare,url_gupy,url_infojobs,url_indeed,url_progamathor]
 
 teste = requests.get(url_gupy)
 html_teste = teste.text
@@ -25,9 +27,9 @@ html_teste = teste.text
 ij = requests.get(url_infojobs)
 html_ij = ij.text
 
-#for u in lsturl:
-#    r = requests.get(u)
-#    print(u," 🌏 ","Status:",requests.get(u), "-",httpstatuscodelib.status_code_meaning(r.status_code))
+for u in lsturl:
+    r = requests.get(u)
+    print(u," 🌏 ","Status:",requests.get(u), "-",httpstatuscodelib.status_code_meaning(r.status_code))
 
 #print()
 
@@ -85,12 +87,12 @@ soup2= BeautifulSoup(html_ij,'html.parser') # Parseia o resultado do teste.text 
 #>> TAG ALVO = <a id="navbtn_certified" title="Certificates" role="button">Certificates</a>
 #>> ID DO ALVO = id="navbtn_certified"
 #>> ALVO = Certificates
-novo_alvo = requests.get("https://www.w3schools.com/html/html_id.asp")
-html_alvo = novo_alvo.text
-soup_alvo = BeautifulSoup(html_alvo,'html.parser')
-encontrando_title_alvo = soup_alvo.find(id="navbtn_certified")  # Encontra e armazena a tag que possui essa ID.
-title_alvo_capturado = encontrando_title_alvo.get('title') # # Acessou a TAG e pega só o texto do title, no caso "Certificates".
-print(title_alvo_capturado) # Exibe o valor capturado, nesse exemplo é "Certificates"
+# novo_alvo = requests.get("https://www.w3schools.com/html/html_id.asp")
+# html_alvo = novo_alvo.text
+# soup_alvo = BeautifulSoup(html_alvo,'html.parser')
+# encontrando_title_alvo = soup_alvo.find(id="navbtn_certified")  # Encontra e armazena a tag que possui essa ID.
+# title_alvo_capturado = encontrando_title_alvo.get('title') # # Acessou a TAG e pega só o texto do title, no caso "Certificates".
+# print(title_alvo_capturado) # Exibe o valor capturado, nesse exemplo é "Certificates"
 
 
 
