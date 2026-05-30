@@ -65,7 +65,7 @@ for card in cards:
     }
     jobs.append(job)
 
-print(jobs)
+#print(jobs)
 
 ###>> FEITO PELO COPILOT.>>>> for card in cards:
 ###>> FEITO PELO COPILOT.>>>>     title = card.find('h2', class_="js_vacancyTitle").get_text(strip=True) # pega o título da vaga
