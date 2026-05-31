@@ -47,14 +47,14 @@ for card in cards:
         company = company_class.get_text(" ", strip=True) ## Pega a EMPRESA e formata removendo espaços
     else:
         company="Empresa Confidencial"
-    print(company)
+    #print(company)
     ##------------------------------------------
     
     ##------CAPTURANDO O LOCATION---------------
     location_raw = card.find('div', class_="mb-8").get_text() ## CAPTURA O LOCATION
     split_location = [item.strip() for item in location_raw.split(',')]
     location = split_location[0]
-    print(location)
+    #print(location)
     ##------------------------------------------
 
     job = {
@@ -65,7 +65,7 @@ for card in cards:
     }
     jobs.append(job)
 
-#print(jobs)
+print(jobs)
 
 ###>> FEITO PELO COPILOT.>>>> for card in cards:
 ###>> FEITO PELO COPILOT.>>>>     title = card.find('h2', class_="js_vacancyTitle").get_text(strip=True) # pega o título da vaga
