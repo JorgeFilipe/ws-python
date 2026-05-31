@@ -27,9 +27,21 @@ html_iban=requests.get("https://www.iban.com/currency-codes").text
 soup = BeautifulSoup(html_iban, 'html.parser')
 table=soup.find('table', class_="table table-bordered downloads tablesorter")
 table_row=table.find_all('tr')
-count=0
+data_clean=[]
+c=0
 for row in table_row:
-    list_row=row.find_all('td')
+    if row:
+        c+=1
+        t = row.get_text(" ", strip=True)
+        print(t)
+        #data_clean.append(tds)
+    else:
+        t = "Deu Ruim"
+        print(t)
+
+    if c==3:
+        break
+## MÉTODO MAIS FACIL E RÁPIDO === list_row=[td.string for td in row.find_all('td')]
     # for td in list_row:
     #     td.string=td.string.replace('<td>','').replace('</td>','')
-    print(list_row)
+#print(data_clean[2])
