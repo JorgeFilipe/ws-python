@@ -25,23 +25,52 @@ from bs4 import BeautifulSoup
 
 html_iban=requests.get("https://www.iban.com/currency-codes").text
 soup = BeautifulSoup(html_iban, 'html.parser')
+
 table=soup.find('table', class_="table table-bordered downloads tablesorter")
 table_row=table.find_all('tr')
-data_clean=[]
-c=0
-for row in table_row:
-    if row:
-        c+=1
-        t = row.get_text(" ", strip=True)
-        print(t)
-        #data_clean.append(tds)
-    else:
-        t = "Deu Ruim"
-        print(t)
 
-    if c==3:
-        break
+data_clean=[]
+paises=[]
+pais={}
+c=0
+
+for row in table_row:
+    #print(row)
+    list_row=[td.string for td in row.find_all('td')]
+    for td in list_row:
+        pais={
+            'Pais': list_row[0],
+            'Moeda': list_row[1],
+            'Codigo': list_row[2],
+            'Numero': list_row[3]
+        }
+    paises.append(pais)
+    
+    print(paises)
+    #print(list_row)
+    #pais={
+    #    'Pais': list_row[1],
+    #    'Moeda': list_row[2],
+    #    'Codigo': list_row[3],
+    #    'Numero': list_row[4]
+    #}
+    #paises.append(pais)
+    #for p in list_row:
+    #if row:
+    #    c+=1
+    #    t = row.get_text(" ", strip=True)
+    #    print(t)
+    #    #data_clean.append(tds)
+    #else:
+    #    t = "Deu Ruim"
+    #    print(t)
+#
+    #if c==3:
+    #    break
 ## MÉTODO MAIS FACIL E RÁPIDO === list_row=[td.string for td in row.find_all('td')]
     # for td in list_row:
     #     td.string=td.string.replace('<td>','').replace('</td>','')
 #print(data_clean[2])
+    
+    
+    
