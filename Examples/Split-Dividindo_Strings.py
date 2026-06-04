@@ -11,6 +11,8 @@ print()
 dados = "nome, idade, cidade"
 lista_limpa = [item.strip() for item in dados.split(',')]
 print(lista_limpa)  # ['nome', 'idade', 'cidade']
+print()
+print(lista_limpa[0])  # Exibindo o item 1 do array
 
 ##### EXPLICAÇÃO DO COMBO:  lista_limpa = [item.strip() for item in dados.split(',')]
 #

@@ -1,0 +1,31 @@
+# 4️⃣ Indeed (nível intermediário)
+
+🔗 Indeed Brasil
+
+⚠️ Aqui o game muda:
+- anti-bot
+- rate limit
+- conteúdo dinâmico
+
+👉 Excelente pra aprender: ## (PESQUISAR PARA ESTUDAR)
+- headers
+- user-agent
+- retry
+- proxies
+
+------------------------------------------------------------------------
+
+# 5️⃣ LinkedIn Jobs (nível hard 💀)
+
+🔗 LinkedIn Jobs
+
+⚠️ Muito protegido
+- anti-scraping pesado
+- login
+- JS dinâmico
+
+Só recomendo quando: ## (PESQUISAR PARA ESTUDAR)
+- já dominar BeautifulSoup
+- Selenium
+- requests/session
+- cookies
