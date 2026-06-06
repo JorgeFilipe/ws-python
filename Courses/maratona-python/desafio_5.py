@@ -29,48 +29,40 @@ soup = BeautifulSoup(html_iban, 'html.parser')
 table=soup.find('table', class_="table table-bordered downloads tablesorter")
 table_row=table.find_all('tr')
 
-data_clean=[]
 paises=[]
 pais={}
-c=0
+id=0
 
 for row in table_row:
     #print(row)
     list_row=[td.string for td in row.find_all('td')]
+    id+=1
     for td in list_row:
         pais={
+            'ID': id,
             'Pais': list_row[0],
             'Moeda': list_row[1],
             'Codigo': list_row[2],
             'Numero': list_row[3]
         }
-    paises.append(pais)
-    
-    print(paises)
-    #print(list_row)
-    #pais={
-    #    'Pais': list_row[1],
-    #    'Moeda': list_row[2],
-    #    'Codigo': list_row[3],
-    #    'Numero': list_row[4]
-    #}
-    #paises.append(pais)
-    #for p in list_row:
-    #if row:
-    #    c+=1
-    #    t = row.get_text(" ", strip=True)
-    #    print(t)
-    #    #data_clean.append(tds)
-    #else:
-    #    t = "Deu Ruim"
-    #    print(t)
-#
-    #if c==3:
-    #    break
-## MÉTODO MAIS FACIL E RÁPIDO === list_row=[td.string for td in row.find_all('td')]
-    # for td in list_row:
-    #     td.string=td.string.replace('<td>','').replace('</td>','')
-#print(data_clean[2])
-    
-    
-    
+    if pais!={}:
+        paises.append(pais)
+###
+flag=False
+while flag!=True:
+    print("Bem-Vindo ao Negociador de Moedas")
+    print("Escolha pelo n[umero da lista o país que deseja consultar o código da moeda:")
+    for p in paises:
+        print(f"#{p['ID']} {p['Pais']}")
+    print()
+    print(len(paises))
+    entrada=int(input(">>"))
+    if entrada>len(paises):
+        print("AEW")
+    flag=False
+
+# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
+# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
+# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
+# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
+# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
