@@ -78,12 +78,12 @@ while flag!=True:
     for p in paises:
         print(f"#{p['ID']} {p['Pais']}")
     print()
-    print(f"Total de países: {len(paises)}")
-    print()
+    #print(f"Total de países: {len(paises)}")
+    #print()
 
     while flag2 != True:
         try:
-            entrada = int(input(">>"))
+            entrada = int(input("░"))
 
             if entrada > len(paises):
                 print("A opção digitada não existe!")
@@ -91,6 +91,7 @@ while flag!=True:
 
             for p in paises:
                 if p['ID'] == entrada:
+                    print()#Espaço para melhor visualização.
                     print(
                         f"No país {p['Pais']} a moeda é {p['Moeda']} "
                         f"e o código é {p['Codigo']} "
