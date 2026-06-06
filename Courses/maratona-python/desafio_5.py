@@ -35,8 +35,27 @@ id=0
 
 for row in table_row:
     #print(row)
-    list_row=[td.string for td in row.find_all('td')]
-    id+=1
+    #list_row=[td.string for td in row.find_all('td')] <<< Tentei usar o 'td.string', mas ele não funciona porque tem tags dentro da td, então usei o .get_text(strip=True) que pega o texto e tira os espaços em branco. O problema do .string é que ele só funciona quando existe um único nó de texto dentro da tag. E estava gerando erro porque o conteúdo não é mais um único nó de texto puro e sim as Tags:
+    # O problema do .string Ele só funciona quando existe um único nó de texto dentro da tag.
+    # 
+    # Mas imagine:
+    # 
+    # <td>
+    #     Brazil
+    # </td>
+    # 
+    # Ou:
+    # 
+    # <td><span>Brazil</span></td>
+    # 
+    # Nesse caso 'td.string' pode retornar 'None' porque o conteúdo não é mais um único nó de texto puro e isso quebra seu scraper.
+
+    list_row = [td.get_text(strip=True) for td in row.find_all('td')]
+    if not list_row:
+        continue
+
+    id += 1
+
     for td in list_row:
         pais={
             'ID': id,
@@ -49,20 +68,54 @@ for row in table_row:
         paises.append(pais)
 ###
 flag=False
+flag2=False
 while flag!=True:
-    print("Bem-Vindo ao Negociador de Moedas")
+    print()
+    print("Bem-Vindo ao Negociador de Moedas V0.1")
+    print()
     print("Escolha pelo n[umero da lista o país que deseja consultar o código da moeda:")
+    print()
     for p in paises:
         print(f"#{p['ID']} {p['Pais']}")
     print()
-    print(len(paises))
-    entrada=int(input(">>"))
-    if entrada>len(paises):
-        print("AEW")
-    flag=False
+    print(f"Total de países: {len(paises)}")
+    print()
 
-# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
-# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
-# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
-# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
-# SÓ PRECISA FAZER O TRATAMENTO DAS ENTRADAS, QUANDO O VALOR DIGITADO FOR MAIOR QUE OS ELEMENTOS NA LISTA E QUANDO FOR DIGITADO LETRAS.
+    while flag2 != True:
+        try:
+            entrada = int(input(">>"))
+
+            if entrada > len(paises):
+                print("A opção digitada não existe!")
+                continue
+
+            for p in paises:
+                if p['ID'] == entrada:
+                    print(
+                        f"No país {p['Pais']} a moeda é {p['Moeda']} "
+                        f"e o código é {p['Codigo']} "
+                        f"e número {p['Numero']}."
+                    )
+                    print()#Espaço para melhor visualização.
+                    flag = True
+                    flag2 = True
+                    break
+
+        except ValueError:
+            print("Digite apenas números!")
+
+    #### CODIGO ANTIGO, COM ERROS #########################
+    #while flag2!=True:
+    #    entrada=int(input(">>"))
+    #    if type(entrada)!=int:
+    #        print("A opção digitada é String, digite um número!")
+    #    if entrada>len(paises):
+    #        print("A opção digitada não existe!")
+    #    if type(entrada)==int and entrada<=len(paises):
+    #        for p in paises:
+    #            if p['ID']==entrada:
+    #                print(f"No país {p['Pais']} a moeda é {p['Moeda']} e o código é {p['Codigo']} e número {p['Numero']}.")
+    #                print()
+    #                flag=True
+    #                flag2=True
+    #                break
