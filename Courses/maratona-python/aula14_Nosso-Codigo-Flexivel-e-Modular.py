@@ -5,6 +5,7 @@ from infojobs import scrapping_infojobs
 print()#Breakline
 
 jobs_python_infojobs=scrapping_infojobs("https://www.infojobs.com.br/empregos.aspx?palabra=Python")
+print(len(jobs_python_infojobs))
 print(jobs_python_infojobs)
 
 print()#Breakline
@@ -12,6 +13,7 @@ print("-------------------------------------------------------------------")
 print()#Breakline
 
 jobs_javascript_infojobs=scrapping_infojobs("https://www.infojobs.com.br/empregos.aspx?palabra=Java+Script")
+print(len(jobs_javascript_infojobs))
 print(jobs_javascript_infojobs)
 
 print()#Breakline
@@ -19,6 +21,7 @@ print("-------------------------------------------------------------------")
 print()#Breakline
 
 jobs_java_infojobs=scrapping_infojobs("https://www.infojobs.com.br/empregos.aspx?palabra=java")
+print(len(jobs_java_infojobs))
 print(jobs_java_infojobs)
 
 print()#Breakline
